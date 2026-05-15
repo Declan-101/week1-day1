@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Pet Adoption Service</title>
+    </head>
+    <body> 
+        <h1>Pet Adoption Service In Irvine, CA Area</h1>
+        <p>Welcome to your local pet adoption service!</p>
+        <p>We have many pets available for adoption, including dogs, cats, rabbits, and more. Our mission is to find loving homes for all of our animals and to provide them with the care and attention they deserve.</p>
+        <p>If you are interested in adopting a pet please browse our available pets.</p>
+        <h2>Available Pets</h2>
+        <ul>
+            <li><a href="https://www.adoptapet.com/pet-search?speciesId=1&radius=50&postalCode=92618&city=Irvine&state=CA&transport=false">Dogs</a></li>
+            <li><a href="https://www.adoptapet.com/pet-search?speciesId=2&radius=50&postalCode=92618&city=Irvine&state=CA&transport=false">Cats</a></li>
+            <li><a href="https://www.adoptapet.com/pet-search?speciesId=3&radius=50&postalCode=92618&city=Irvine&state=CA&transport=false">Rabbits</a></li>
+            <li><a href="https://www.adoptapet.com/pet-search?speciesId=5&radius=50&postalCode=92618&city=Irvine&state=CA&transport=false">Birds</a></li>
+            <li><a href="https://www.adoptapet.com/pet-search?speciesId=7&radius=50&postalCode=92618&city=Irvine&state=CA&transport=false">Reptiles-Amphibians-Fishs</a></li>
+        </ul>
+
+    </body>
+
+</html>    
