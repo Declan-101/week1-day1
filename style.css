@@ -80,6 +80,9 @@ header {
                 margin: 20px 0 10px 0;
                 width: 100px;
             }
+            main #album #photo img {
+                width: 400px;
+            }
             footer {
                 height: 40px;
                 background-color:rgb(129, 141, 179);
