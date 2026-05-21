@@ -27,45 +27,38 @@
         <h1>My Fourth Heading</h1>
         <p>My Fourth paragraph.</p>
         <ul id="album">
-            <li id="photo"><img src="images 2/winterland1.jpg"></li>
+            <!--<li id="photo"><img src="images 2/winterland1.jpg"></li>
             <li id="photo"><img src="images 2/winterland2.jpg"></li>
             <li id="photo"><img src="images 2/winterland3.jpg"></li>
             <li id="photo"><img src="images 2/winterland4.jpg"></li>
             <li id="photo"><img src="images 2/winterland5.jpg"></li>
-            <li id="photo"><img src="images 2/winterland6.jpg"></li>
+            <li id="photo"><img src="images 2/winterland6.jpg"></li>-->
         </ul>
         </main> <!-- End Main Content-->
 
         <!-- Footer Information-->
         <footer>&copy; Copyright 2020</footer>
 
-        </div> <!-- End Container 
+        </div> <!-- End Container -->
+
+        <script>
+            var photos = []; //Declare an empty array to store image element
+            var fileNames = []; //Declare an empty element to store image file names
+            var imageList = []; //Declare an empty array to store html list that contain an image
+            var image; //Declare an empty variable to store the assembled image list codes
+            var openList = "<li id='photo'>"; //Declare a variable to contain open list tag
+            var closeList = "</li>"; //Declare a variable to contain close list tag
+
+            //Create a loop to create 6 images starting with the index of 0
+            for (var i=0; i<6; i++) {
+                fileNames.push( "winterland"+(i+1)); //Create image file name and store in the array
+                photos.push("<img src='images 2/"+fileNames[i]+".jpg'>"); //Assemble file name into image elements and store in an array
+                image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in a variable
+                imageList.push(image); //Store(push) the assembled list codes into an array
+            }
+            //display all six image codes stored in the array
+            document.getElementById("album").innerHTML = imageList;
+        </script>
 
     </body>
 </html>
-
-
-
-
-body {
-        margin: 0;
-        padding: 0;
-        font-size: 1.1em;
-        background-color: #94d7e3;
-    }
-    h1 {
-        font-family: Futura, Helvetica, Arial, 'sans-serif';
-        margin-top: 0;
-    }
-    #wrapper {
-        margin: 0 auto;
-        padding: 10px 30px;
-        width: 500px;
-        background-color: white;
-        height: 100%;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-    }
-    img {
-        border: 2px solid black;
-    }
