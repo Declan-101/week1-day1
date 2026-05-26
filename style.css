@@ -83,6 +83,46 @@ header {
             main #album #photo img {
                 width: 400px;
             }
+            /* Gallery */
+
+#album li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+#album img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+}
+
+.description {
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    width: 210px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    visibility: hidden;
+}
+
+#album li:hover {
+    cursor: pointer;
+}
+
+#album li:hover .description {
+    visibility: visible;
+}
+
+/* Footer */
+footer {
             footer {
                 height: 40px;
                 background-color:rgb(129, 141, 179);
