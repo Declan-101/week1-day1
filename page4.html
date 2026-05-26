@@ -46,18 +46,51 @@
             var fileNames = []; //Declare an empty element to store image file names
             var imageList = []; //Declare an empty array to store html list that contain an image
             var image; //Declare an empty variable to store the assembled image list codes
-            var openList = "<li id='photo'>"; //Declare a variable to contain open list tag
+            var captionTexts = [
+                "winter Scene 1",
+                "winter Scene 2",
+                "winter Scene 3",
+                "winter Scene 4",
+                "winter Scene 5",
+                "winter Scene 6",
+                "winter Scene 7",
+                "winter Scene 8",
+                "winter Scene 9",
+                "winter Scene 10",
+            ];
+            var descTexts = [
+                "Beautiful snowy landscape.",
+                "Cold winter morning.",
+                "Snow covered pathway.",
+                "Winter trees in sunlight.",
+                "Frozen outdoor scenery.",
+                "Peaceful snow environment.",
+                "Fresh winter atmosphere.",
+                "Snowy forest scene.",
+                "Winter sunset view.",
+                "Relaxing winter landscape."
+            ];
             var closeList = "</li>"; //Declare a variable to contain close list tag
+            var openCaptionTag = "<p class='caption'>";
+            var closeCaptionTag = "</p>";
+
+            var openDescTag = "<p class='description'>";
+            var closeDescTag = "</p>";
 
             //Create a loop to create 6 images starting with the index of 0
-            for (var i=0; i<6; i++) {
+            for (var i=0; i<10; i++) {
                 fileNames.push( "winterland"+(i+1)); //Create image file name and store in the array
                 photos.push("<img src='images 2/"+fileNames[i]+".jpg'>"); //Assemble file name into image elements and store in an array
-                image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in a variable
+                var openList = "<li id='photo"+(i+1)+"'>";
+                image = openList 
+                      + photos[i]
+                      + openCaptionTag + captionTexts[i] + closeCaptionTag
+                      + openDescTag + descTexts[i] + closeDescTag
+                      + closeList;                
                 imageList.push(image); //Store(push) the assembled list codes into an array
             }
             //display all six image codes stored in the array
-            document.getElementById("album").innerHTML = imageList;
+            document.getElementById("album").innerHTML = imageList.join("");
         </script>
 
     </body>
