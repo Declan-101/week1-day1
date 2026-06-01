@@ -129,3 +129,41 @@
                 padding-top: 20px;
                 color:rgb(211,218,240);
             }
+
+            #album {
+                position: relative;
+            }
+
+            #infoBox {
+                position: fixed;
+                left: 50%;
+                top: 60%;
+                transform: translateX(-50%);
+                width: 350px;
+                
+                background-color: rgba(0, 0, 0, 0.85);
+                color: white;
+                text-align: center;
+                padding: 20px;
+                border-radius: 15px;
+                visibility: hidden;
+                z-index: 9999;
+            }
+
+            #infoBox h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+
+            }
+
+            #infoText {
+                font-size: 16px;
+            }
+
+            #closeInfo {
+                color: yellow;
+                font-weight: bold;
+                margin-top: 20px;
+                cursor: pointer;
+                display: block;
+            }
