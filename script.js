@@ -8,7 +8,7 @@ var photos = []; //Declare an empty array to store image element
                 "Footpath",
                 "Sunrise",
                 "Icy",
-                "Moutain's",
+                "Moutains",
                 "Forest",
                 "Sunset",
                 "Village",
@@ -26,10 +26,21 @@ var photos = []; //Declare an empty array to store image element
                 "Snow covered village.",
                 "Fun in the snow."
             ];
+            var infoTexts = [
+                "This landscape shows a beautiful winter scene covered in snow.",
+                "This frosty image shows how cold and icy winter mornings can look.",
+                "This footpath is covered in snow and creates a peaceful winter walkway.",
+                "This sunrise shines through snowy trees and creates a peaceful winter walkway.",
+                "This icy scene shows frozen outdoor scenery during the winter.",
+                "These mountain top are covered in show and look calm and cold.",
+                "This forest has a fresh winter atmosphere with snow all around.",
+                "This sunset creats a warm view over a cold winter scene.",
+                "This village is covered in show and looks quite and peachful.",
+                "This snowman shows the fun side of winter and playing in the snow."
+            ];
             var closeList = "</li>"; //Declare a variable to contain close list tag
             var openCaptionTag = "<p class='caption'>";
             var closeCaptionTag = "</p>";
-
             var openDescTag = "<p class='description'>";
             var closeDescTag = "</p>";
 
@@ -46,4 +57,16 @@ var photos = []; //Declare an empty array to store image element
                 imageList.push(image); //Store(push) the assembled list codes into an array
             }
             //display all six image codes stored in the array
-            document.getElementById("album").innerHTML = imageList.join("");
+            document.getElementById("album").innerHTML += imageList.join("");
+            
+            var description = document.querySelectorAll(".description");
+            for (let i = 0; i< description.length; i++) {
+                description[i].addEventListener("click", function () {
+                document.getElementById("infoHeading").innerHTML = captionTexts[i];
+                document.getElementById("infoText").innerHTML = infoTexts[i];
+                document.getElementById("infoBox").style.visibility = "visible";
+                });
+            }
+            document.getElementById("closeInfo").addEventListener("click", function () {
+                document.getElementById("infoBox").style.visibility = "hidden";
+            });
