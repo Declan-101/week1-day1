@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>My Fourth Web Page</title>
-
-            <link rel="stylesheet" href="style.css">    
-            
-    </head>
-    <body>
-<!-- Container to wrap everything -->
-        <div id="container">
-
-<!--brand of website -->
-            <header style="font-size: 60px; color: #fff;">My Web Site Brand</header>
-            <!-- main navigation -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="page2.html">About</a></li>
-                    <li><a href="page4.html">Gallery</a></li>
-                    <li><a href="page3.html">Contact</a></li>
-                </ul>
-            </nav> <!-- End Main Navigation-->
-                
-            <!-- Main Content-->
-        <main>
-        <h1>My Fourth Heading</h1>
-        <p>My Fourth paragraph.</p>
-        <ul id="album">
-            <div id="infoBox">
-                <h2 id="infoHeading"></h2>
-                <p id="infoText"></p>
-                <p id="closeInfo"></p>
-            </div>
-            <!--<li id="photo"><img src="images 2/winterland1.jpg"></li>
-            <li id="photo"><img src="images 2/winterland2.jpg"></li>
-            <li id="photo"><img src="images 2/winterland3.jpg"></li>
-            <li id="photo"><img src="images 2/winterland4.jpg"></li>
-            <li id="photo"><img src="images 2/winterland5.jpg"></li>
-            <li id="photo"><img src="images 2/winterland6.jpg"></li>-->
-        </ul>
-        </main> <!-- End Main Content-->
-
-        <!-- Footer Information-->
-        <footer>&copy; Copyright 2020</footer>
-
-        </div> <!-- End Container -->
-
-        <script src="script.js">
-            /* var photos = []; //Declare an empty array to store image element
+var photos = []; //Declare an empty array to store image element
             var fileNames = []; //Declare an empty element to store image file names
             var imageList = []; //Declare an empty array to store html list that contain an image
             var image; //Declare an empty variable to store the assembled image list codes
@@ -95,8 +46,4 @@
                 imageList.push(image); //Store(push) the assembled list codes into an array
             }
             //display all six image codes stored in the array
-            document.getElementById("album").innerHTML = imageList.join("");*/
-        </script>
-
-    </body>
-</html>
+            document.getElementById("album").innerHTML = imageList.join("");
