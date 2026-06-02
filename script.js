@@ -1,3 +1,6 @@
+// Gallery code only runs if album exsits 
+var album = document.getElementById("album");
+if (album) {
 var photos = []; //Declare an empty array to store image element
             var fileNames = []; //Declare an empty element to store image file names
             var imageList = []; //Declare an empty array to store html list that contain an image
@@ -69,4 +72,19 @@ var photos = []; //Declare an empty array to store image element
             }
             document.getElementById("closeInfo").addEventListener("click", function () {
                 document.getElementById("infoBox").style.visibility = "hidden";
+            });
+        }
+
+            // Contact page dropdown code
+            var contactMethod = document.getElementById("contactMethod");
+            var emailBox = document.getElementById("emailBox");
+            var phoneBox = document.getElementById("phoneBox");
+            contactMethod.addEventListener("change", function () {
+                emailBox.style.display = "none";
+                phoneBox.style.display = "none";
+                if (contactMethod.value === "email") {
+                    emailBox.style.display = "block";
+                } else if (contactMethod.value === "phone") {
+                    phoneBox.style.display = "block";
+                }
             });

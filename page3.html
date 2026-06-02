@@ -32,28 +32,28 @@
                 <legend>User personal information</legend>
                 <label>Enter your full name</label> 
                 <input type="text" name="name">
-                <label>Enter your email</label>
+                <!--<label>Enter your email</label>
                 <input type="email" name="email">
                 <label>Enter your phone</label>
-                <input type="text" name="phone">
+                <input type="text" name="phone">-->
                 <label>Select your gender</label>
                 <input type="radio" name="gender" value="male">Male
                 <input type="radio" name="gender" value="female">Female 
-
+                
                 <label>How should we contact you?</label>
                 <select id="contactMethod">
                     <option id="choose" value="">Choose One</option>
                     <option id="emailOption" value="email">Email</option>
-                    <option id ="phoneOption" value="Phone">Phone</option>
+                    <option id ="phoneOption" value="phone">Phone</option>
                 </select>
 
                 <div id="emailBox" class="contactBox">
-                    <label>Entre best email to contact you:</label> 
+                    <label>Entre your email:</label> 
                     <input type="email" name="bestEmail">
                 </div>
 
-                <div id="phoneBox" class="contactbox">
-                    <label>Entre best phone number to contact you:</label>
+                <div id="phoneBox" class="contactBox">
+                    <label>Entre your phone number:</label>
                     <input type="phone" name="bestPhone">
                 </div>
 
@@ -69,5 +69,7 @@
 
         </div> <!-- End Container--> 
 
+        <script src="script.js"></script>
+            
     </body>
 </html>
