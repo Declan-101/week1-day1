@@ -61,6 +61,43 @@ var photos = []; //Declare an empty array to store image element
             }
             //display all six image codes stored in the array
             document.getElementById("album").innerHTML += imageList.join("");
+
+            // Lightbox code - opens when image is clicked
+var galleryImages = document.querySelectorAll("#album img");
+
+for (let i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].addEventListener("click", function () {
+
+        var backdrop = document.createElement("div");
+        backdrop.className = "backdrop";
+
+        var box = document.createElement("div");
+        box.className = "box";
+
+        var closeBtn = document.createElement("span");
+        closeBtn.className = "close";
+        closeBtn.innerHTML = "X";
+
+        var largeImg = document.createElement("img");
+        largeImg.src = galleryImages[i].src;
+
+        box.appendChild(closeBtn);
+        box.appendChild(largeImg);
+
+        document.body.appendChild(backdrop);
+        document.body.appendChild(box);
+
+        closeBtn.addEventListener("click", function () {
+            backdrop.remove();
+            box.remove();
+        });
+
+        backdrop.addEventListener("click", function () {
+            backdrop.remove();
+            box.remove();
+        });
+    });
+}
             
             var description = document.querySelectorAll(".description");
             for (let i = 0; i< description.length; i++) {
@@ -76,15 +113,19 @@ var photos = []; //Declare an empty array to store image element
         }
 
             // Contact page dropdown code
-            var contactMethod = document.getElementById("contactMethod");
-            var emailBox = document.getElementById("emailBox");
-            var phoneBox = document.getElementById("phoneBox");
-            contactMethod.addEventListener("change", function () {
-                emailBox.style.display = "none";
-                phoneBox.style.display = "none";
-                if (contactMethod.value === "email") {
-                    emailBox.style.display = "block";
-                } else if (contactMethod.value === "phone") {
-                    phoneBox.style.display = "block";
-                }
-            });
+var contactMethod = document.getElementById("contactMethod");
+var emailBox = document.getElementById("emailBox");
+var phoneBox = document.getElementById("phoneBox");
+
+if (contactMethod) {
+    contactMethod.addEventListener("change", function () {
+        emailBox.style.display = "none";
+        phoneBox.style.display = "none";
+
+        if (contactMethod.value === "email") {
+            emailBox.style.display = "block";
+        } else if (contactMethod.value === "phone") {
+            phoneBox.style.display = "block";
+        }
+    });
+}
